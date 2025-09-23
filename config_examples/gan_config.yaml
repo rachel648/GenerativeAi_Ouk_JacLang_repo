@@ -1,0 +1,28 @@
+# GAN Training Configuration
+batch_size: 64
+learning_rate: 0.0002
+num_epochs: 200
+device: "cuda"
+seed: 42
+save_interval: 10
+log_interval: 100
+checkpoint_dir: "checkpoints/gan"
+log_dir: "logs/gan"
+data_dir: "data/images"
+
+# GAN-specific parameters
+generator_lr: 0.0002
+discriminator_lr: 0.0002
+beta1: 0.5
+beta2: 0.999
+latent_dim: 100
+image_size: 64
+channels: 3
+d_steps: 1
+g_steps: 1
+label_smoothing: 0.1
+feature_matching: false
+
+# Architecture parameters
+generator_features: 64
+discriminator_features: 64
